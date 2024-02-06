@@ -1,5 +1,7 @@
-import 'package:homework_1/homework_1.dart' as homework_1;
+import 'package:homework_1/drawer.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${homework_1.calculate()}!');
+  final Drawer drawer = Drawer(symbol: 'o', prefixText: 'test');
+
+  drawer.drawLine(17);
 }
