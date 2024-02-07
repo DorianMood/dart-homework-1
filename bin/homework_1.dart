@@ -11,4 +11,12 @@ void main(List<String> arguments) {
   // Task 3
   print('\nTask 3:');
   drawer.drawRect(8, 3);
+
+  // Task 4
+  print('\nTask 4:');
+  drawer.drawSquare();
+
+  // Task 5
+  print('\nTask 5:');
+  drawer.drawLastFigure();
 }
