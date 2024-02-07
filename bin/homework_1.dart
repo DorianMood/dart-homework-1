@@ -1,7 +1,11 @@
 import 'package:homework_1/drawer.dart';
 import 'package:homework_1/drawer_provider.dart';
+import 'package:homework_1/rx.dart';
 
 void main(List<String> arguments) {
+  //INFO: homework null-safety
+  print('null-safety:');
+
   // Task 1.1
   final Drawer drawer = Drawer(symbol: 'o', prefixText: 'test');
 
@@ -30,4 +34,14 @@ void main(List<String> arguments) {
   print('\nTask 2.2:');
   final Drawer defaultDrawer = drawerProvider.getDefaultDrawer();
   defaultDrawer.drawSquare();
+
+  //INFO: homework RX
+  print('\n\nRX:');
+  final stream = createEmmiter();
+  stream
+      .where((event) => event % 2 == 0)
+      .map((event) => event * event)
+      .where((event) => event % 3 == 0)
+      .take(15)
+      .listen((event) => print(event));
 }
