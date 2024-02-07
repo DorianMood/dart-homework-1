@@ -4,7 +4,6 @@ Stream<int> createEmmiter() {
   final StreamController<int> controller = StreamController<int>();
 
   Timer.periodic(Duration(seconds: 1), (timer) {
-    print('sink');
     controller.sink.add(timer.tick - 1);
   });
 
