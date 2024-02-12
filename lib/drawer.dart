@@ -18,7 +18,10 @@ class Drawer {
   }
 
   void drawLine(int length) {
-    print(prefixText);
+    if (prefixText != null) {
+      print(prefixText);
+    }
+
     _drawLine(length);
 
     _lastFigure = Figure.line;
@@ -27,7 +30,10 @@ class Drawer {
   }
 
   void drawRect(int width, int height) {
-    print(prefixText);
+    if (prefixText != null) {
+      print(prefixText);
+    }
+
     for (int i = 0; i < height; i++) {
       _drawLine(width);
     }
