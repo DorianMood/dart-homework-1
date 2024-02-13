@@ -1,7 +1,7 @@
 import 'package:homework_1/drawer.dart';
 
 class DrawerProvider {
-  DrawerProvider({required this.symbol, this.prefixText});
+  DrawerProvider({this.symbol = 'o', this.prefixText});
 
   final String symbol;
   final String? prefixText;
